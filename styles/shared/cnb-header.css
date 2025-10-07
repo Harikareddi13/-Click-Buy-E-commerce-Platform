@@ -1,0 +1,182 @@
+/* Base Styles for the cnb-style header */
+.cnb-header {
+    background-color: rgb(19, 25, 33);
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    font-family: Arial, sans-serif;
+    z-index: 1000;
+}
+
+.cnb-header-left-section {
+    width: 180px;
+    flex-shrink: 0;
+    display: flex; /* Ensure this is a flex container */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally within the 180px width */
+}
+
+@media (max-width: 800px) {
+    .cnb-header-left-section {
+        width: unset;
+    }
+}
+
+/* Flex container for logo and text, responsible for perfect vertical centering */
+.header-link {
+    display: flex; /* FIX: Use flex to put logo and title side-by-side */
+    align-items: center; /* FIX: Vertically centers the logo and title */
+    height: 100%;       /* Takes full height of the parent section for centering */
+    
+    /* Existing styles */
+    padding: 6px;
+    border-radius: 2px;
+    cursor: pointer;
+    text-decoration: none;
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.header-link:hover {
+    border: 1px solid white;
+}
+
+/* Styles for the Logo Image */
+.app-logo {
+    /* Removed display: inline; */
+    height: 50px; 
+    width: 50px; 
+    margin-right: 8px; /* Space between logo and text */
+    border-radius: 50%; /* Ensures the image is circular */
+    object-fit: cover;
+    flex-shrink: 0; 
+}
+
+/* Styles for the 'Click&Buy' text title */
+.app-title {
+    /* Removed display: inline; */
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    white-space: nowrap;
+}
+
+
+/* Middle Section Styles (Original structure) */
+.cnb-header-middle-section {
+    flex: 1;
+    max-width: 850px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+}
+
+.search-bar {
+    flex: 1;
+    width: 0;
+    font-size: 16px;
+    height: 38px;
+    padding-left: 15px;
+    border: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.search-button {
+    background-color: rgb(254, 189, 105);
+    border: none;
+    width: 45px;
+    height: 40px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    flex-shrink: 0;
+}
+
+.search-icon {
+    height: 22px;
+    margin-left: 2px;
+    margin-top: 3px;
+}
+
+
+/* Right Section Styles (Original structure) */
+.cnb-header-right-section {
+    width: 180px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: end;
+}
+
+.orders-link {
+    color: white;
+    text-decoration: none;
+    padding: 6px;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: column; /* Align sub-texts vertically */
+    justify-content: center; /* Center content vertically */
+}
+
+.orders-link:hover {
+        border: 1px solid white;
+}
+
+.returns-text {
+    display: block;
+    font-size: 13px;
+}
+
+.orders-text {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.cart-link {
+    color: white;
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-decoration: none;
+    padding: 6px;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.cart-link:hover {
+    border: 1px solid white;
+}
+
+.cart-icon {
+    width: 50px;
+    margin-top: 5px; 
+}
+
+.cart-text {
+    margin-top: 12px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.cart-quantity {
+    color: rgb(240, 136, 4);
+    font-size: 16px;
+    font-weight: 700;
+
+    position: absolute;
+    top: 4px;
+    left: 22px;
+    
+    width: 26px;
+    text-align: center;
+}
